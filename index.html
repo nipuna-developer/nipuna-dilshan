@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nipuna Dilshan — Portfolio</title>
+  <!-- Tailwind (CDN). For production, consider building a static CSS file. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Background image (replace url as needed) */
+    :root { --bg-url: url('/assets/bg.jpg'); }
+    .bg-cover-img{ background-image: var(--bg-url); }
+    /* Accent underline hover */
+    .link-underline::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:linear-gradient(90deg,#34d399,#22d3ee,#fff);transition:width .2s}
+    .link-underline:hover::after{width:100%}
+    /* Card */
+    .card{border:1px solid rgba(38,38,38,.8);background:rgba(10,10,10,.4);box-shadow:0 0 0 1px rgba(255,255,255,.02)}
+  </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 min-h-screen selection:bg-neutral-800">
+  <!-- Background image + overlay -->
+  <div aria-hidden class="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat bg-cover-img"></div>
+  <div aria-hidden class="fixed inset-0 -z-10 bg-black/50"></div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 border-b border-neutral-900/60 bg-neutral-950/70 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/50">
+    <div class="max-w-6xl mx-auto px-5 h-16 flex justify-between items-center">
+      <a href="#top" class="text-sm font-semibold tracking-tight opacity-90 hover:opacity-100">Nipuna Dilshan</a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="#experience" class="relative inline-block opacity-90 hover:opacity-100 link-underline">Experience</a>
+        <a href="#services" class="relative inline-block opacity-90 hover:opacity-100 link-underline">Services</a>
+        <a href="#education" class="relative inline-block opacity-90 hover:opacity-100 link-underline">Education</a>
+        <a href="#about" class="relative inline-block opacity-90 hover:opacity-100 link-underline">About</a>
+        <a href="#contact" class="relative inline-block opacity-90 hover:opacity-100 link-underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="pt-20 pb-10 max-w-6xl mx-auto px-5">
+    <span class="inline-flex items-center gap-2 rounded-full border border-neutral-800 bg-neutral-900/60 px-3 py-1 text-[11px] uppercase tracking-wider">
+      <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span>Available for work — Colombo, Sri Lanka</span>
+    </span>
+    <h1 class="mt-4 text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 via-cyan-300 to-white">
+      Nipuna Dilshan
+    </h1>
+    <p class="mt-3 text-xl">Full‑stack Software Developer</p>
+    <p class="mt-4 max-w-2xl text-neutral-300">
+      I craft fast, accessible web apps and robust APIs. Care deeply about DX, performance, and delightful details.
+    </p>
+    <div class="mt-6 flex gap-3">
+      <a href="#services" class="px-5 py-3 rounded-2xl bg-neutral-100 text-neutral-900 hover:bg-white">Hire Me</a>
+      <a href="https://github.com/nipuna-developer" target="_blank" rel="noreferrer" class="px-5 py-3 rounded-2xl border border-neutral-700 hover:bg-neutral-900/40">GitHub</a>
+      <a href="https://www.linkedin.com/in/nipuna-dilshan" target="_blank" rel="noreferrer" class="px-5 py-3 rounded-2xl border border-neutral-700 hover:bg-neutral-900/40">LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 bg-neutral-900/30">
+    <div class="max-w-6xl mx-auto px-5">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Services</h2>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="card rounded-3xl p-6">
+          <div class="flex items-start justify-between">
+            <div>
+              <h3 class="text-lg font-semibold">Web Design</h3>
+              <p class="mt-1 text-sm text-neutral-400">Single‑page landing</p>
+            </div>
+            <span class="opacity-70">💳</span>
+          </div>
+          <p class="mt-4 text-3xl font-extrabold">LKR 5,000 <span class="text-xs text-neutral-400">one‑time</span></p>
+          <ul class="mt-4 text-sm text-neutral-300 space-y-2">
+            <li>• Responsive layout</li>
+            <li>• Name + Bio + Contact</li>
+            <li>• Deploy‑ready (Netlify/Vercel)</li>
+          </ul>
+          <div class="mt-6 flex gap-3">
+            <a href="#contact" class="px-5 py-3 rounded-2xl bg-neutral-100 text-neutral-900">Buy Now</a>
+            <a href="#contact" class="px-5 py-3 rounded-2xl border border-neutral-700">Talk first</a>
+          </div>
+          <p class="mt-3 text-xs text-neutral-500">Replace with your PayHere/Stripe checkout link to accept payments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-16">
+    <div class="max-w-6xl mx-auto px-5">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Experience</h2>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-4">
+          <p class="font-medium">Software Engineer — Freelance</p>
+          <p class="text-sm text-neutral-400">2022 – Present</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-16 bg-neutral-900/30">
+    <div class="max-w-6xl mx-auto px-5">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Education</h2>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-4">
+          <p class="font-medium">BSc in Information Technology — In Progress</p>
+          <p class="text-sm text-neutral-300">University of Moratuwa — 2024 – Current</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16">
+    <div class="max-w-6xl mx-auto px-5">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">About</h2>
+      <p class="mt-4 text-neutral-300 leading-relaxed">
+        Hi, I’m <strong>Nipuna Dilshan</strong> — a developer focused on modern web apps and products. I love clean UX,
+        strong engineering practices, and impactful ideas. If you’d like to collaborate or hire me, my inbox is open.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-neutral-900/30">
+    <div class="max-w-6xl mx-auto px-5">
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Collaborate</h2>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <a href="https://t.me/SANDOR_PRO" target="_blank" rel="noreferrer" class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6 block">Telegram — quick chat</a>
+        <a href="mailto:nipuna@nipunadilshan.me" class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6 block">Email — projects & partnerships</a>
+        <a href="https://www.linkedin.com/in/nipuna-dilshan" target="_blank" rel="noreferrer" class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6 block">LinkedIn — professional connections</a>
+        <a href="https://github.com/nipuna-developer" target="_blank" rel="noreferrer" class="rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6 block">GitHub — open‑source & code</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t border-neutral-800 text-center text-neutral-400">
+    <p>© <span id="year"></span> Nipuna Dilshan</p>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Dev checks (won't block prod)
+    try {
+      console.assert(document.querySelector('section#services'), 'Services should render');
+      console.assert(document.querySelector('a[href^="mailto:"]'), 'Email link should exist');
+      console.assert(/nipuna-developer/.test(document.body.innerHTML), 'GitHub link should include nipuna-developer');
+    } catch (e) {}
+  </script>
+</body>
+</html>
