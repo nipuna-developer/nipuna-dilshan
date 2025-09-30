@@ -1,0 +1,26 @@
+{
+  "name": "nipunadilshan-portfolio",
+  "version": "1.0.0",
+  "description": "Nipuna Dilshan's Professional Portfolio",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -p 8080",
+    "dev": "live-server --port=3000",
+    "build": "echo 'Static site - no build required'",
+    "deploy": "vercel"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "fullstack",
+    "website",
+    "nipuna-dilshan"
+  ],
+  "author": "Nipuna Dilshan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nipuna-developer/nipunadilshan.me"
+  },
+  "homepage": "https://nipunadilshan.me"
+}
