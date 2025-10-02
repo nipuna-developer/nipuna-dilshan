@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Hi, I'm Nipuna! — Full-stack Developer</title>
   <meta name="description" content="Experienced full-stack developer crafting modern web applications and AI-driven systems. Specializing in React, Node.js, and scalable digital solutions." />
   
@@ -207,6 +207,39 @@
       }
       100% {
         box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+      }
+    }
+    
+    /* Mobile-specific fixes */
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+    
+    * {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    
+    /* Prevent text size adjustment on mobile */
+    html {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    
+    /* Ensure proper mobile scaling */
+    @media screen and (max-width: 768px) {
+      html {
+        font-size: 16px !important;
+      }
+      
+      body {
+        min-width: 320px;
+      }
+      
+      /* Fix any potential horizontal scroll issues */
+      .max-w-7xl {
+        max-width: calc(100vw - 2rem);
       }
     }
   </style>
