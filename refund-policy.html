@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Refund Policy - Nipuna Dilshan</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,6 +19,36 @@
       background: rgba(30, 41, 59, 0.5);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(71, 85, 105, 0.3);
+    }
+    
+    /* Mobile-specific fixes */
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+    }
+    
+    * {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    
+    html {
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    
+    @media screen and (max-width: 768px) {
+      html {
+        font-size: 16px !important;
+      }
+      
+      body {
+        min-width: 320px;
+      }
+      
+      .max-w-4xl {
+        max-width: calc(100vw - 2rem);
+      }
     }
   </style>
 </head>
