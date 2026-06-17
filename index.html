@@ -349,9 +349,10 @@
             
             <!-- Graphic layout mimicking profile with visual elements -->
             <div class="relative glass-card rounded-3xl overflow-hidden aspect-square flex flex-col justify-center items-center border border-cyberBorder text-center p-8">
-              <div class="w-32 h-32 rounded-full bg-gradient-to-tr from-accentViolet to-accentTeal flex items-center justify-center text-6xl shadow-inner mb-6 relative">
+              <div class="w-32 h-32 rounded-full bg-gradient-to-tr from-accentViolet to-accentTeal overflow-hidden flex items-center justify-center shadow-inner mb-6 relative">
                 <span class="absolute inset-0 rounded-full bg-gradient-to-tr from-accentViolet to-accentTeal animate-pulse opacity-40"></span>
-                <span class="relative z-10">👨‍💻</span>
+                <img src="https://github.com/nipuna-developer.png" alt="Nipuna Dilshan" class="w-full h-full object-cover relative z-10" onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';" />
+                <div id="avatar-fallback" class="hidden absolute inset-0 z-10 items-center justify-center text-6xl">👨‍💻</div>
               </div>
               <h4 class="text-2xl font-bold text-white mb-2">Nipuna Dilshan</h4>
               <p class="text-sm text-accentTeal font-semibold uppercase tracking-wider mb-6">Full-Stack Software Engineer</p>
@@ -440,7 +441,7 @@
           <!-- Current Input Prompt Line -->
           <div class="flex items-center mt-3 text-slate-200">
             <span class="text-slate-500 mr-2">nipuna@moratuwa:~$</span>
-            <input type="text" id="terminal-input" class="bg-transparent border-none outline-none flex-1 text-slate-200 focus:ring-0" autocomplete="off" autofocus placeholder="try 'help'..." />
+            <input type="text" id="terminal-input" class="bg-transparent border-none outline-none flex-1 text-slate-200 focus:ring-0" autocomplete="off" placeholder="try 'help'..." />
           </div>
         </div>
         
@@ -1213,8 +1214,9 @@
       setTimeout(animateTyping, speed);
     }
     
-    // Start typing trigger
+    // Start typing trigger and scroll to top
     window.addEventListener('DOMContentLoaded', () => {
+      window.scrollTo(0, 0);
       setTimeout(animateTyping, 800);
     });
 
